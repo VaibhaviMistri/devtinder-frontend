@@ -6,9 +6,17 @@ let socket;
 
 export const createSocketConnection = () => {
     if (!socket) {
-        socket = io(BASE_URL, {
-            withCredentials: true,
-        });
+        if (location.hostname === "localhost") {
+            socket = io(BASE_URL, {
+                withCredentials: true,
+            });
+        }
+        else {
+            socket = io("/", {
+                path: "/api/socket.io",
+                withCredentials: true,
+            });
+        }
     }
     return socket;
 };
