@@ -142,7 +142,7 @@ const EditProfile = ({ user }) => {
                     </div>
                 </div>
                 <div className='my-10'>
-                    <UserCard user={{ firstName, lastName, photoUrl, age, about, gender }} buttonsDisable={false} />
+                    <UserCard user={{ firstName, lastName, photoUrl, age, about, gender }} buttonEnabled={false} />
                 </div>
             </div>
             {showToast && <div className="toast toast-center toast-middle">

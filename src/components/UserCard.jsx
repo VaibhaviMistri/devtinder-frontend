@@ -3,7 +3,7 @@ import { BASE_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { removeUserFromFeed } from "../utils/feedSlice";
 
-const UserCard = ({ user, buttonDisabled }) => {
+const UserCard = ({ user, buttonEnabled, onAction }) => {
     const { _id, firstName, lastName, photoUrl, about, gender, age } = user;
     const dispatch = useDispatch();
 
@@ -14,8 +14,9 @@ const UserCard = ({ user, buttonDisabled }) => {
                 { withCredentials: true }
             );
             dispatch(removeUserFromFeed(_id));
+            if (onAction) onAction();
         } catch (error) {
-            console.error(error);            
+            console.error(error);
         }
     }
 
@@ -31,10 +32,12 @@ const UserCard = ({ user, buttonDisabled }) => {
                     <h2 className="card-title">{firstName + " " + lastName}</h2>
                     <p>{about}</p>
                     <p>{age && ("Age: " + age)}{gender && (" Gender: " + gender)}</p>
-                    {buttonDisabled && <div className="card-actions justify-between">
-                        <button className="btn btn-primary" onClick={() => handleFeedRequests("ignored", _id)}>Ignore</button>
-                        <button className="btn btn-secondary" onClick={() => handleFeedRequests("interested", _id)}>Interested</button>
-                    </div>}
+                    {buttonEnabled && (
+                        <div className="card-actions justify-between">
+                            <button className="btn btn-primary" onClick={() => handleFeedRequests("ignored", _id)}>Ignore</button>
+                            <button className="btn btn-secondary" onClick={() => handleFeedRequests("interested", _id)}>Interested</button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
