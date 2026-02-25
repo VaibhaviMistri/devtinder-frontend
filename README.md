@@ -1,12 +1,66 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 📁 2️⃣ Frontend – README.md  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```md
+# 💘 devTinder – Frontend
 
-## Expanding the ESLint configuration
+Frontend application for **devTinder**, a developer networking and matchmaking platform.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This app allows developers to create profiles, explore other developers, send connection requests, and build professional relationships.
+
+---
+
+## 🚀 Tech Stack
+
+- React.js
+- React Router DOM
+- Axios
+- Redux Toolkit (if used)
+- Tailwind CSS
+- Vite / Parcel (whichever you're using)
+
+---
+
+## 📌 Features
+
+- 🔐 Login / Signup UI
+- 🏠 Dashboard Feed
+- 👤 Profile Page
+- ✏ Edit Profile
+- 📩 Connection Requests
+- ❤️ Interested / Ignore Buttons
+- 🔄 Real-time UI Updates
+- 🔐 Protected Routes
+
+---
+
+## 🏗 Folder Structure
+```bash
+src/
+│
+├── components/
+├── pages/
+├── utils/
+├── redux/
+└── App.js
+
+
+---
+
+## 🌐 Backend Integration
+
+Frontend communicates with: http://localhost:5000
+
+Using **Axios** for API calls.
+
+---
+
+## ▶️ Installation & Setup
+
+```bash
+git clone https://github.com/VaibhaviMistri/devtinder-frontend.git
+cd devTinder-frontend
+npm install
+npm run dev

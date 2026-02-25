@@ -28,8 +28,10 @@ const Body = () => {
     useEffect(() => {
         if (!userData) {
             fetchUser();
+        } else {
+            navigate("feed");
         }
-    }, []);
+    }, [userData]);
 
     return (
         <div>

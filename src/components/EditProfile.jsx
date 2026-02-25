@@ -29,7 +29,7 @@ const EditProfile = ({ user }) => {
                 about,
                 gender,
             };
-            const res = await axios.patch(
+            const res = await axios.put(
                 BASE_URL + "/profile/edit",
                 userData,
                 {
