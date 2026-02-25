@@ -35,10 +35,9 @@ This app allows developers to create profiles, explore other developers, send co
 src/
 │
 ├── components/
-├── pages/
 ├── utils/
-├── redux/
-└── App.js
+├── main.jsx
+└── App.jsx
 ```
 
 ---
