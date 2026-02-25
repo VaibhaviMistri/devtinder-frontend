@@ -1,10 +1,4 @@
-
----
-
-# 📁 2️⃣ Frontend – README.md  
-
-```md
-# 💘 devTinder – Frontend
+# devTinder – Frontend
 
 Frontend application for **devTinder**, a developer networking and matchmaking platform.
 
